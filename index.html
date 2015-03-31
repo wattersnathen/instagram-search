@@ -11,6 +11,16 @@
 </head>
 <body ng-app="InstagramSearch">
     <div class="container" ng-controller="searchCtrl">
+        <header class="text-center">
+            <img src="images/ng-instagram.png" alt="Instragram Searcher" class="img-responsive center-block"/>
+            <form name="instragramSearchForm" ng-submit="submit()" novalidate>
+                <input type="text" placeholder="Enter a tag to search" ng-model="data.query" required="" />
+                <input type="submit" value="Submit" class="btn btn-default"/>
+            </form>
+        </header>
+        <section id="results" ng-show="searchComplete">
+            
+        </section>
     </div>
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angular-animate.min.js"></script>
