@@ -1,0 +1,12 @@
+header {
+    margin: 3.8em auto 1em auto;
+}
+
+header img {
+    margin-bottom: 1em;
+}
+
+header input[type="text"] {
+    border-radius: 5px;
+    padding: 0.35em 1em;
+}
