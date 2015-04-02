@@ -17,6 +17,10 @@
                 <input type="text" placeholder="Enter a tag to search" ng-model="query" required="" />
                 <input type="submit" value="Submit" class="btn btn-default"/>
             </form>
+            <div class="row" >
+                <span ng-if="instragramSearchForm.$submitted && instragramSearchForm.$invalid">Please enter a tag to search</span>
+                <span ng-if="instragramSearchForm.$submitted && searchComplete">We found {{ results.length }} images tagged with <em>{{ query }}</em></span>
+            </div>
         </header>
         <section id="results" ng-show="searchComplete">
             
