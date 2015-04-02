@@ -4,5 +4,7 @@ angular.module('InstagramSearch', ['ngAnimate'])
   $httpProvider.defaults.useXDomain = true;
 })
 
+.controller('searchCtrl', ['$scope', '$http', '$log', function($scope, $http, $log) {
+    
 
 }]);
