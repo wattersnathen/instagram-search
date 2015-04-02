@@ -10,3 +10,29 @@ header input[type="text"] {
     border-radius: 5px;
     padding: 0.35em 1em;
 }
+
+ul {
+    list-style: none;
+}
+
+ul li img {
+    margin: .4em;
+}
+
+.ng-enter, .ng-enter-active {
+  -webkit-transition: opacity ease-in 0.5s;
+  transition:opacity ease-in 0.5s;
+}
+
+.ng-enter {
+    opacity: 0;
+}
+
+.ng-enter-stagger {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.ng-enter-active {
+    opacity: 1;
+}
