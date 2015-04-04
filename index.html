@@ -14,12 +14,12 @@
         <header class="text-center">
             <img src="images/ng-instagram.png" alt="Instragram Searcher" class="img-responsive center-block"/>
             <form name="instragramSearchForm" ng-submit="submit()" novalidate>
-                <input type="text" placeholder="Enter a tag to search" ng-model="query" required="" />
+                <input type="text" placeholder="Enter a tag to search" ng-model="query" ng-model-options="{ updateOn: 'submit' }" required="" />
                 <input type="submit" value="Submit" class="btn btn-default"/>
             </form>
             <div class="row" >
                 <span ng-if="instragramSearchForm.$submitted && instragramSearchForm.$invalid">Please enter a tag to search</span>
-                <span ng-if="instragramSearchForm.$submitted && searchComplete">We found {{ results.length }} images tagged with <em>{{ query }}</em></span>
+                <span ng-if="instragramSearchForm.$submitted && searchComplete && instragramSearchForm.$valid">We found {{ results.length }} images tagged with <em>{{ query }}</em></span>
             </div>
         </header>
         <section id="results" ng-show="searchComplete">
