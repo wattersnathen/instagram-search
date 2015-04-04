@@ -26,13 +26,16 @@ angular.module('InstagramSearch', ['ngAnimate'])
                 $log.info(data);
 
                 $scope.searchComplete = true;
+
             })
             .error(function(data, status, header, config) {
                 $log.warn("Failure to retrieve images from Instagram");
             });
+
         } else {
             $log.warn("Form submission was invalid");
         }
+
     };
 
     $scope.results = [];
